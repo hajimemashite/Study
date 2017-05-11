@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carousel byson</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--script src="jquerylib/jquery-3.2.1.min.js"></script-->
+	
+	<style type="text/css">
+	a{
+		text-decoration: none;
+
+		color: #0c4d91;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	#main{
+		margin: 0 auto;
+		max-width: 1024px;
+		height: 350px;
+		overflow: hidden;
+		font-size: 13px;
+	}
+	.ult-carousel{
+		float: left;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+	img{
+		width: 200px;
+		height: 300px;
+		max-width: 300px;
+		max-height: 400px;
+		
+	}
+	.slide{
+		padding: 5px;
+		border: 1px #f1f1f1 solid;
+		margin:10px;
+		float: left;
+		display: inline-block;
+	}
+	.title{
+		text-align: center;
+		font-family: tahoma;
+		color: #0c4d91;
+		padding: 5px;
+	}
+	#control{
+		position: relative;
+	}
+	#next,#prev{
+		padding: 8px;
+		color: #0c4d91;
+		border: 1px #0c4d91 solid;
+		position: absolute;
+		top:150px;
+	}
+	#next:hover,#prev:hover{
+		background: #f1f1f1;
+	}
+	#next{
+		right: 0px;
+		cursor: pointer;
+	}
+	#prev{
+		left: 0px;
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div class="utl-carousel">
+			<div class="slide">
+				<img src="img/dream_catcher_1.jpg" >
+				<div class="title">Dream Catcher 1</div>
+			</div>
+			<div class="slide">
+				<img src="img/dream_catcher_2.jpg" >
+				<div class="title">Dream Catcher 2</div>
+			</div>
+			<div class="slide">
+				<img src="img/dream_catcher_3.jpg" >
+				<div class="title">Dream Catcher 3</div>
+			</div>
+			<div class="slide">
+				<img src="img/dream_catcher_4.jpg" >
+				<div class="title"><a href="#">Dream Catcher 4</a></div>
+			</div>
+			<div class="slide">
+				<img src="img/dream_catcher_5.jpg" >
+				<div class="title">Dream Catcher 5</div>
+			</div>
+			<div class="slide">
+				<img src="img/dream_catcher_6.jpg" >
+				<div class="title">Dream Catcher 6</div>
+			</div>
+			<div class="slide">
+				<img src="img/dream_catcher_7.jpg" >
+				<div class="title">Dream Catcher 7</div>
+			</div>
+			<div class="slide">
+				<img src="img/dream_catcher_8.jpg" >
+				<div class="title">Dream Catcher 8</div>
+			</div>
+			<div id="control">
+				<span id='next' class="fa fa-toggle-right">next</span>
+				<span id='prev' class="fa fa-toggle-left">prev</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+		var arrSlide,i,size,hinharr,arrSrc;
+		var temp;
+		arrSlide=document.getElementsByClassName('slide');
+		size=arrSlide.length;
+		for(i=0;i<size;i++)
+		{
+			arrSrc=arrSlide[i].children[0].src;
+			console.log(arrSrc);
+		}
+		
+		var next=document.getElementById('next');
+		var prev=document.getElementById('prev');
+
+		next.addEventListener("click",Next);
+		prev.addEventListener("click",Prev);
+
+		function Next()
+		{
+			var fist=arrSlide[0].children[0].src;
+
+			for (i=0;i<size-1;i++) 
+			{
+				var srcTemp=arrSlide[i+1].children[0].src;
+				arrSlide[i].children[0].src=srcTemp;
+			}
+			arrSlide[size-1].children[0].src=fist;
+		}
+		function Prev()
+		{
+			var last=arrSlide[size-1].children[0].src;
+			for (i=size-1;i>0;i--)
+			{
+				var srcTemp=arrSlide[i-1].children[0].src;
+				arrSlide[i].children[0].src=srcTemp;
+			}
+			arrSlide[0].children[0].src=last;
+		}
+
+		setInterval(Next,5000);
+</script>
