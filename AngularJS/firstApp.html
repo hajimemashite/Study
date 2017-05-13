@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caculator - This is first app with Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<div ng-app="">
+	
+	<p>Số a: <input type="text" name="soa" ng-model="soA"></p>
+	<p>Số b: <input type="text" name="sob" ng-model="soB"></p>
+
+	<p>Phép tính: 
+	<select ng-model="pheptinh">
+		<option ng-model="cong">+</option>
+		<option ng-model="tru">-</option>
+		<option ng-model="nhan">*</option>
+		<option ng-model="chia">/</option>
+	</select></p>
+
+	<p>Kết quả: <strong>{{soA + soB}}</strong>
+
+</div>
+
+
+</body>
+</html>
