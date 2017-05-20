@@ -1,0 +1,77 @@
+.sprite {
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-bg {
+    width: 4px;
+    height: 4px;
+    background-position: -5px -5px;
+}
+
+.sprite-bullet {
+    width: 11px;
+    height: 11px;
+    background-position: -19px -5px;
+}
+
+.sprite-fr-flag {
+    width: 16px;
+    height: 12px;
+    background-position: -40px -5px;
+}
+
+.sprite-logo {
+    width: 56px;
+    height: 65px;
+    background-position: -66px -5px;
+}
+
+.sprite-nav-border {
+    width: 2px;
+    height: 38px;
+    background-position: -5px -80px;
+}
+
+.sprite-nextbtn {
+    width: 38px;
+    height: 49px;
+    background-position: -17px -80px;
+}
+
+.sprite-nextbtn-s {
+    width: 31px;
+    height: 39px;
+    background-position: -65px -80px;
+}
+
+.sprite-prevbtn {
+    width: 38px;
+    height: 49px;
+    background-position: -132px -5px;
+}
+
+.sprite-prevbtn-s {
+    width: 31px;
+    height: 39px;
+    background-position: -132px -64px;
+}
+
+.sprite-search {
+    width: 11px;
+    height: 12px;
+    background-position: -106px -113px;
+}
+
+.sprite-uk-flag {
+    width: 16px;
+    height: 12px;
+    background-position: -127px -113px;
+}
+
+.sprite-vn-flag {
+    width: 16px;
+    height: 12px;
+    background-position: -153px -113px;
+}

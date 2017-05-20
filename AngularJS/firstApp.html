@@ -7,23 +7,27 @@
 </head>
 <body>
 
-<div ng-app="">
-	
-	<p>Số a: <input type="text" name="soa" ng-model="soA"></p>
-	<p>Số b: <input type="text" name="sob" ng-model="soB"></p>
-
-	<p>Phép tính: 
-	<select ng-model="pheptinh">
-		<option ng-model="cong">+</option>
-		<option ng-model="tru">-</option>
-		<option ng-model="nhan">*</option>
-		<option ng-model="chia">/</option>
-	</select></p>
-
-	<p>Kết quả: <strong>{{soA + soB}}</strong>
-
+<div ng-app="firstApp">
+	<div ng-controller="headerController">
+		<h2>Xin chào {{data.ban}} đến với website {{data.website}} !</h2>
+	</div>
+	<div ng-controller="contentController">
+		<h3>Đây là Content Controller. Được tạo bởi {{data.name}} đến từ {{data.location}}!</h3>
+	</div>
+	<script type="text/javascript">
+		angular.module("firstApp",[]).controller("headerController",function($scope){
+			$scope.data={
+				ban: "các bạn",
+				website: "google.com.vn"
+			};
+		}).controller("contentController",function($scope){
+			$scope.data={
+				name:"Son",
+				location: "Lam Dong iu dấu!"
+			}
+		});
+	</script>
 </div>
-
 
 </body>
 </html>
