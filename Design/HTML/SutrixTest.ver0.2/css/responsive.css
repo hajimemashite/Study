@@ -1,0 +1,219 @@
+/*
+max-width: 320px (điện thoại di động, hiển thị chiều dọc)
+max-width: 480px (điện thoại di động, hiển thị chiều ngang)
+max-width: 600px (máy tính bảng, hiển thị chiều dọc)
+max-width: 800px (máy tính bảng, hiển thị chiều ngang)
+max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
+max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
+min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
+
+@media only screen and (min-width: 320px) and (max-width: 860px) {...}
+ 
+*/
+/* Dành cho điện thoại */
+@media all and (max-width: 320px) {
+    section .thumnail{
+        position: relative;
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    #navigator{
+        display: none;
+    }
+}
+ 
+/* Dành cho máy tính bảng chiều dọc */
+@media all and (min-width: 600px) {
+
+}
+ 
+/* Dành cho máy tính bảng chiều ngang */
+@media all and (min-width: 1024px) {
+
+}
+ 
+/* Dành cho màn hình desktop */
+@media all and (min-width: 1280px) {
+
+}
+
+@media screen and (max-width: 480px) {
+    nav#top-menu {
+        max-width: 100%;
+        text-align: center;
+    }
+    nav#top-menu ul li{
+        display: block;
+        background: no-repeat;
+        text-align: center;
+        padding:8px 5px
+    }
+    figure img.slider{
+        max-width: 100%;
+        min-width: 460px;
+    }
+    #slider .intro {
+        display: block;
+        width: 100%;
+        float: left;
+        border-right: none;
+        padding: 10px 0;
+        
+    }
+    section .paragraph p
+    {
+        font-size:0.917em;
+        color:#000000;
+        display: inline-block;
+        float: left;
+        width: 100%;
+        line-height: 1.667em;
+        text-align: justify;
+    }
+    section h1{
+        display: block;
+        width: 100%;
+        font-size:1.5em;
+    }
+    section .thumnail,section .thumnail img{
+        float: left;
+    }
+    section .paragraph{
+        width: 100%;
+    }
+    article{
+        max-width: 100%;
+    }
+    .partner{
+        float: left;
+        position: relative;
+        width: 100%;
+    }
+    article.news{
+        width: 100%;
+    }
+    .box{
+        float: left;
+        width: 100%;
+    }
+    .contact-us,.newsletter,.quick-link{
+        float: left;
+        width: 100%;
+    }
+    .footer{
+        display: block;
+        flex-direction:row;
+        
+    }
+    .footer h2.box-name{
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    footer .contact-us p{
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    footer .contact-us,footer .quick-link,footer .newsletter {
+        margin: 10px 10px;
+        width: 100%;
+    }
+    footer .newsletter{
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+    footer .bottom-bar{
+        background: url(../images/line.gif) top center repeat-x; 
+        
+        height: 30px;
+        width: 100%;
+        padding:5px;
+    }
+    footer .bottom-bar nav{
+        width: 100%;
+        display: block;
+    }
+    footer .bottom-bar li{
+        display: block;
+        text-align: center;
+    }
+    footer .bottom-bar a:after{
+        content: "";
+    }
+    footer .bottom-bar p.copyright{
+        float: left;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 900px){
+    nav#top-menu li{
+        padding: 8px 10px;
+        font-size: 0.83em;
+        font-family: CenturyGothic;
+        text-shadow:#ff6900 0 -2px;
+        background: url(../images/nav-border.gif) no-repeat;
+        text-align: center;
+    }
+    #slider .intro {
+        display: block;
+        width: 100%;
+        float: left;
+        border-right: none;
+        padding: 10px 0;
+        
+    }
+    figure img.slider{
+        width: 100%;
+    }
+    nav#indicators {
+        z-index: 9999;
+        float: left;
+        position: absolute;
+        bottom: 60px;
+        right: 10px;
+    }
+    section .thumnail{
+        position: relative;
+        display: block;
+        margin-right: 10px;
+        float: left;
+    }
+    section .paragraph {
+    font-size: 0.7em;
+    color: #000000;
+    width: 100%;
+    line-height: 1.667em;
+    text-align: justify;
+    padding: 0px 5px;}
+    section h1{
+        display: block;
+        width: 100%;
+        float: left;
+    }
+}
+@media all and (max-width: 526px) and (min-width: 270px){
+    nav#top-menu{
+        font-size: 1.0em;
+        background:url('../images/bars-icon.png')right top no-repeat;
+        padding-right:10px;
+        cursor:pointer;
+        height: 30px;
+        background-color: #ffc900;
+    }
+    nav#top-menu>ul{
+        display: none;
+    }
+    nav#top-menu>ul.active{
+        display: block;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    ul.active li{
+        display: block;
+        background: no-repeat;
+        text-align: center;
+        padding:8px 5px
+    }
+}

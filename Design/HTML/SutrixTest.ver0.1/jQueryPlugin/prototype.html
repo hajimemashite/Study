@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype</title>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		(function($){
+    $.fn.extend({ 
+ 
+        neoAnimateMenu: function(options) {
+ 
+            // Đặt các giá trị mặc định
+            var defaults = {
+                animatePadding: 60
+            };
+             
+            var options = $.extend(defaults, options);
+         
+            return this.each(function() {
+                var opts =options;
+                
+                //Đặt tên biến cho element (ul)
+                var obj = $(this);              
+                 
+                // Lấy tất cả thẻ li trong ul
+                var items = $("li a", obj);
+                
+                // Thêm sự kiện mouseover và mouseout vào thẻ a
+                items.mouseover(function() {
+                    // lúc này this chính là thẻ a
+                    $(this).animate({paddingLeft: opts.animatePadding}, 500);
+                });
+                items.mouseout(function() {
+                    $(this).animate({paddingLeft: '0'}, 500);
+                });
+            });
+        }
+    });
+})(jQuery);
+	</script>
+	<ul id="menu">
+	    <li><a href="#">Trang chủ</a></li>
+	    <li><a href="#">Tổng hợp</a></li>
+	    <li><a href="#">Hướng dẫn</a></li>
+	    <li><a href="#">Miễn phí</a></li>
+	    <li><a href="#">Liên hệ</a></li>
+	</ul>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+		    jQuery('#menu').neoAnimateMenu({
+		        padding:20
+		    })
+		});
+	</script>
+</body>
+</html>
